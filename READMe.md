@@ -1,6 +1,6 @@
-# PI-HOLE Docker
+# PI-HOLE & Unbound Docker Compose
 
-# Guide
+## Useful Resources
 
 - [Setup Pihole Docker (Official)](https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker)
 - [Configure Clients to use Pihole](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
@@ -12,9 +12,19 @@
 
 Use in combination with the browser extension [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) for blocking youtube ads for example
 
-# Environment
+## Environment
 
-Create an `.env` file in the same folder/directory as the `docker-compose.yml` file.
+Create an `.env` file in the same directory as the `docker-compose.yml` file.
+```
+# directory/folder structure
+pihole (root dir name)
+    |
+    .gitignore
+    .READMe.md
+    docker-compose.yml
+    .env
+```
+
 Inside of the `env file`:
 
 ```
