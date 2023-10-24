@@ -30,3 +30,7 @@ Inside of the `env file`:
 ```
 PIHOLE_PWD=<super secret password for logging into pihole dashboard>
 ```
+
+## Run Project
+
+The project can be run with the command `docker-compose up -d`. Pihole and Unbound will restart automatically unless explicity stopped by a user.
