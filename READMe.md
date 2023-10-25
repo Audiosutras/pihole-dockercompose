@@ -17,7 +17,7 @@ docker-compose version 1.28.0, build d02a7b1a
 ```
 
 If nothing was returned when running the above commands follow docker's recommend 
-installation method found here under [Scenario one: Install Docker Desktop](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) for your operating system and/or linux distribution. If your machine is a Raspberry Pi or a single board of some kind check out these operating systems for getting docker up and running:
+installation method found here under [Scenario one: Install Docker Desktop](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) for your operating system and/or linux distribution. If your machine is a Raspberry Pi or a single board of some kind check out these operating systems for getting docker up and running
 
     - [Casa OS](https://github.com/IceWhaleTech/CasaOS)
     - [Hypriot OS](https://blog.hypriot.com/downloads/)
@@ -26,7 +26,7 @@ installation method found here under [Scenario one: Install Docker Desktop](http
 
 If you are planning to clone to this repository you will need git. Check that you have 
 it installed with `git --version`. A version number should be returned on the command 
-line. If not installed on your machine here are instructions below:
+line. If not installed on your machine here are instructions below
 
     - [Installation Instructions for Operating Systems](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
@@ -34,58 +34,58 @@ line. If not installed on your machine here are instructions below:
 
 0a. Clone this repository
 
-```
-# linux/mac commands
+    ```
+    # linux/mac commands
 
-# Using https. Use SSH if contributing to the project 
-$ git clone https://github.com/Audiosutras/pihole-unbound-dockercompose.git
+    # Using https. Use SSH if contributing to the project 
+    $ git clone https://github.com/Audiosutras/pihole-unbound-dockercompose.git
 
-# make pihole-unbound-dockercompose our working directory
-$ cd pihole-unbound-dockercompose
-```
+    # make pihole-unbound-dockercompose our working directory
+    $ cd pihole-unbound-dockercompose
+    ```
 
 0b. Download repository as a zip file
 
-```
-# linux/mac commands
+    ```
+    # linux/mac commands
 
-# download zip file of master branch
-$ wget -O pihole-unbound-dockercompose-master.zip https://github.com/Audiosutras/pihole-unbound-dockercompose/archive/refs/heads/master.zip
+    # download zip file of master branch
+    $ wget -O pihole-unbound-dockercompose-master.zip https://github.com/Audiosutras/pihole-unbound-dockercompose/archive/refs/heads/master.zip
 
-# unzip the zip file
-$ unzip pihole-unbound-dockercompose-master.zip
+    # unzip the zip file
+    $ unzip pihole-unbound-dockercompose-master.zip
 
-# make pihole-unbound-dockercompose our working directory
-$ cd pihole-unbound-dockercompose-master
-```
+    # make pihole-unbound-dockercompose our working directory
+    $ cd pihole-unbound-dockercompose-master
+    ```
 
 1. Create an `.env` file in the same directory as the `docker-compose.yml` file
 
-```
-# linux/mac commands
+    ```
+    # linux/mac commands
 
-$ ls
-docker-compose.yml  READMe.md
+    $ ls
+    docker-compose.yml  READMe.md
 
-# opens nano editor
-$ touch .env && sudo nano .env
-```
+    # opens nano editor
+    $ touch .env && sudo nano .env
+    ```
 
-Paste and replace `<super secret password for logging into pihole dashboard>` with your 
-password.
+    Paste and replace `<super secret password for logging into pihole dashboard>` with your 
+    password.
 
-```
-PIHOLE_PWD=<super secret password for logging into pihole dashboard>
-```
+    ```
+    PIHOLE_PWD=<super secret password for logging into pihole dashboard>
+    ```
 
 Press `CTRL + X` then `Y` and then `ENTER` to exit the editor.
 
 2. Run the project detached as a background process. If you are running this project on 
 Ubuntu there are additional steps that need to be completed. Please see the section below before proceeding.
 
-```
-$ docker-compose up -d
-```
+    ```
+    $ docker-compose up -d
+    ```
 
 Pihole and Unbound will restart automatically unless explicitly stopped by the user.
 
