@@ -78,10 +78,12 @@ If you are planning to clone this repository you will need git. Check that you h
     $ touch .env && sudo nano .env
     ```
 
-    Paste and replace `<super secret password for logging into pihole dashboard>` with your password.
+    Copy & Paste the code block below. Replace `<super secret password for logging into pihole dashboard>` with your password. Also select your current 
 
-    ```
+    ```.env
     PIHOLE_PWD=<super secret password for logging into pihole dashboard>
+    # Switch With your local TimeZone, ex: PIHOLE_TZ=America/New_York 
+    PIHOLE_TZ=<timezone>
     ```
 
     Press `CTRL + X` then `Y` and then `ENTER` to exit the editor.
