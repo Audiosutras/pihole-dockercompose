@@ -19,8 +19,8 @@ docker-compose version 1.28.0, build d02a7b1a
 If nothing was returned when running the above commands follow docker's recommend 
 installation method found here under [Scenario one: Install Docker Desktop](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) for your operating system and/or linux distribution. If your machine is a Raspberry Pi or a single board of some kind check out these operating systems for getting docker up and running
 
-    - [Casa OS](https://github.com/IceWhaleTech/CasaOS)
-    - [Hypriot OS](https://blog.hypriot.com/downloads/)
+- [Casa OS](https://github.com/IceWhaleTech/CasaOS)
+- [Hypriot OS](https://blog.hypriot.com/downloads/)
 
 ### Git (optional)
 
@@ -28,7 +28,7 @@ If you are planning to clone to this repository you will need git. Check that yo
 it installed with `git --version`. A version number should be returned on the command 
 line. If not installed on your machine here are instructions below
 
-    - [Installation Instructions for Operating Systems](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Installation Instructions for Operating Systems](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Running PiHole & Unbound
 
