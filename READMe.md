@@ -10,6 +10,14 @@ Unbound privacy benefits as your configured DNS resolver, but its important to m
 
 Let's get started.
 
+## DNS Resolver CheatSheet
+
+The table below documents the internal ip address of custom dns resolvers that the instance of Pihole comes pre-configured with. 
+
+| DNS Resolver | Internal IP Address |
+| ------- | ------------------- |
+| Unbound | 10.1.1.3#53         |
+
 ## Prerequiste Installation
 
 ### Docker & Docker Compose
