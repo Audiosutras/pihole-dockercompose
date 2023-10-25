@@ -121,9 +121,9 @@ For more Information see the article linked above for step 5.
 
 In order to proceed to step 2 in [Running PiHole & Unbound](#running-pihole--unbound) you will need to update `systemd-resolved` or disable it.
 
-- [Offical Pihole Solution for Ubuntu & Fedora - Update It](https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora)
+1a. [Offical Pihole Solution for Ubuntu & Fedora - Update It](https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora)
 
-- [The Unoffical Solution for the Streets - Disable It](https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu). From the command line:
+1b. [The Unoffical Solution for the Streets - Disable It](https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu). From the command line:
 
     ```
     # The Unoffical Solution for the Streets
