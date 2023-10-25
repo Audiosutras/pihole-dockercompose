@@ -1,6 +1,6 @@
 # PI-HOLE & Unbound Docker Compose
 
-## PreRequistes Installation
+## Prerequistes Installations
 
 ### Docker & Docker Compose
 
