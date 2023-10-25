@@ -10,7 +10,7 @@ Unbound privacy benefits as your configured DNS resolver, but its important to m
 
 Let's get started.
 
-## Prerequistes Installations
+## Prerequiste Installation
 
 ### Docker & Docker Compose
 
