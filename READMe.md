@@ -100,18 +100,27 @@ Pihole and Unbound will restart automatically unless explicitly stopped by the u
         $ hostname -I
     ```
 
-4. Start using Pihole - Configure Clients to use Pihole
+4. Confirm PiHole is using Unbound as the upstream DNS
 
-    - On the Pihole installed machine you can navigate to Wifi or Network Settings and update the `DNS` section for your internet connection by inputing `127.0.0.1`
-    - For local network coverage of all devices you will need to update Static DNS settings found in your router. You will set 
-    the DNS to the local IP address you retrieved in step 3.
+    - Navigate to `http://<ip-address>/admin` replacing `<ip-address` with the address 
+    you obtained in step 3.
+    - Input the `PIHOLE_PWD` password you chose in step 1 to access the admin
+    - Navigate to `Settings`, click on the `DNS` tab. Under `Custom 1 (IPv4)` you 
+    should checked `10.1.1.3#53`. This `Unbound`. 
+    - You can uncheck this and use any of the other upstream dns servers like `Cloudflare` and `Quad9` when you want to.
 
-For more Information see this [article](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245) 
+5. Start using Pihole - [Article: Configure Clients to use Pihole](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
+
+    - On the Pihole installed machine you can navigate to Wifi or Network Settings and update the `DNS` section for your internet connection by inputing `127.0.0.1` as the 
+    value.
+    - For local network coverage of all devices you will need to update Static DNS settings found in your router admin page. You will set 
+    the DNS value to the local IP address you retrieved in step 3.
+
+For more Information see the article linked in the step 5 title.
 
 ## Useful Resources
 
 - [Setup Pihole Docker (Official)](https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker)
-- [Configure Clients to use Pihole](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 - [Blog Post](https://pimylifeup.com/pi-hole-docker/)
 - [resolvconf ubuntu 17+ issue fix](https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu)
 - [Second Helpful Blog Post - Run PiHole on Localhost](https://thanosmour-tk.medium.com/run-pi-hole-in-localhost-and-some-extras-4b50e76611e6)
