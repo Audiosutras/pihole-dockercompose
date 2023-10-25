@@ -31,12 +31,6 @@ If nothing was returned when running the above commands follow docker's recommen
 - [Casa OS](https://github.com/IceWhaleTech/CasaOS)
 - [Hypriot OS](https://blog.hypriot.com/downloads/)
 
-### Git (optional)
-
-If you are planning to clone this repository you will need git. Check that you have it installed with `git --version`. A version number should be returned on the command line. If not installed click the link below.
-
-- [Installation Instructions for Operating Systems](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
 ## Running PiHole & Unbound
 
 - Clone this repository
