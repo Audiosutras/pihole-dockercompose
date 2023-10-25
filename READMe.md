@@ -8,6 +8,8 @@ The benefits of running pi-hole and unbound in docker containers are many. To sp
 
 Unbound privacy benefits as your configured DNS resolver, but its important to mention before starting that you will still be able to disable this resolver and use Cloudflare for example for the benefits of internet speed.
 
+Let's get started.
+
 ## Prerequistes Installations
 
 ### Docker & Docker Compose
