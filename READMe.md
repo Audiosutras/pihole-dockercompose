@@ -1,6 +1,6 @@
 # PI-HOLE & Unbound Docker Compose
 
-[Pi-hole](https://docs.pi-hole.net/) is a DNS sinkhole that is effective at blocking ads and malware by closing connections to blacklisted domains. [Unbound](https://nlnetlabs.nl/projects/unbound/about/) is a validating, recursive, caching DNS resolver that increase the privacy of its users.
+[Pi-hole](https://docs.pi-hole.net/) is a DNS sinkhole that is effective at blocking ads and malware by closing connections to blacklisted domains before a client can connect to them. [Unbound](https://nlnetlabs.nl/projects/unbound/about/) is a validating, recursive, caching DNS resolver that increase the privacy of its users.
 
 This project provision two docker containers on a user's chosen machine that always run unless stopped; one for Pihole and the other Unbound. By default, PiHole is configured to use Unbound as its only upstream DNS server. This cuts Google, Cloudflare, and other DNS providers out from having a record of the domains you have requested to visit. In simple terms, this always means the sites you have visited. However note that your Internet Service Provider will still be able to access your DNS history without any obsfucation. For more information I found [this](https://www.reddit.com/r/pihole/comments/ydkkup/what_are_the_benefits_to_unbound/) reddit thread helpful.
 
