@@ -31,7 +31,7 @@ If nothing was returned when running the above commands follow docker's recommen
 - [Casa OS](https://github.com/IceWhaleTech/CasaOS)
 - [Hypriot OS](https://blog.hypriot.com/downloads/)
 
-## Running PiHole & Unbound
+## Running PiHole & Unbound (Linux/Mac OS)
 
 - Clone this repository
 
