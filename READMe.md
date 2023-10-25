@@ -1,5 +1,13 @@
 # PI-HOLE & Unbound Docker Compose
 
+[Pi-hole](https://docs.pi-hole.net/) is a DNS sinkhole that is effective at blocking ads and malware by closing connections to blacklisted domains. [Unbound](https://nlnetlabs.nl/projects/unbound/about/) is a validating, recursive, caching DNS resolver that increase the privacy of its users.
+
+This project provision two docker containers on a user's chosen machine that always run unless stopped; one for Pihole and the other Unbound. By default, PiHole is configured to use Unbound as its only upstream DNS server. This cuts Google, Cloudflare, and other DNS providers out from having a record of the domains you have requested to visit. In simple terms, this always means the sites you have visited. However note that your Internet Service Provider will still be able to access your DNS history without any obsfucation. For more information I found [this](https://www.reddit.com/r/pihole/comments/ydkkup/what_are_the_benefits_to_unbound/) reddit thread helpful.
+
+The benefits of running pi-hole and unbound in docker containers are many. To speak to a few, it is the ability to run this software across operating system (linux, mac, windows) and across computing devices. You can benefit from adblocking and malware protection on your devices at home by running pihole containerized on a raspberry pi. You can also have this benefit on your laptop when connected to an external network that is not your own like hotel or airport wifi.
+
+Unbound privacy benefits as your configured DNS resolver, but its important to mention before starting that you will still be able to disable this resolver and use Cloudflare for example for the benefits of internet speed.
+
 ## Prerequistes Installations
 
 ### Docker & Docker Compose
@@ -162,8 +170,9 @@ Now we can proceed back to step 2.
 
 ### Resources
 
+- [Pi-hole website](https://pi-hole.net/)
 - [Setup Pihole Docker (Official)](https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker)
-- [Unbound as Upstream DNS](https://nlnetlabs.nl/projects/unbound/about/)
+- [Unbound as an Upstream DNS](https://nlnetlabs.nl/projects/unbound/about/)
 
 ### Articles 
 
