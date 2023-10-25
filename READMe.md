@@ -10,7 +10,9 @@
 - [Unbound as Upstream DNS](https://nlnetlabs.nl/projects/unbound/about/)
 - [Reddit Thread for Getting Unbound to run in same Container as PiHole](https://www.reddit.com/r/docker/comments/rbgrm8/how_to_install_unbound_and_pihole_in_docker_using/)
 
-Use in combination with the browser extension [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) for blocking youtube ads for example
+Use in combination with the browser extension [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) for blocking youtube ads for example. Update: Youtube is getting hip to ad blockers of all kinds. Check out these open source solutions as work around.
+    - [invidious.io](https://invidious.io/)
+
 
 ## Environment
 
