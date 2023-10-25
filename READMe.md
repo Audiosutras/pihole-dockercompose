@@ -122,7 +122,7 @@ If nothing was returned when running the above commands follow docker's recommen
 
 ### Ubuntu Additional Steps
 
-In order to proceed to step 2 in [Running PiHole & Unbound](#running-pihole--unbound) you will need to update `systemd-resolved` or disable it.
+In order to proceed you will need to update `systemd-resolved` or disable it.
 
 - [Offical Pihole Solution for Ubuntu & Fedora - Update It](https://github.com/pi-hole/docker-pi-hole/#installing-on-ubuntu-or-fedora)
 
@@ -162,7 +162,7 @@ Restart NetworkManager
     $ sudo systemctl restart NetworkManager
     ```
 
-Now we can proceed back to step 2.
+Now we can proceed back to step 2 in [Running PiHole & Unbound](#running-pihole--unbound).
 
 ## More Useful Resources & Articles
 
@@ -177,3 +177,7 @@ Now we can proceed back to step 2.
 - [PiHole Docker - Pi My Life UP](https://pimylifeup.com/pi-hole-docker/)
 - [Run PI Hole In Localhost And Some Extras - Medium](https://thanosmour-tk.medium.com/run-pi-hole-in-localhost-and-some-extras-4b50e76611e6)
 - [How To Install Unbound and Pi-hole in Docker using Docker Compose](https://www.reddit.com/r/docker/comments/rbgrm8/how_to_install_unbound_and_pihole_in_docker_using/)
+
+## Additional Information
+
+See [Wiki](https://github.com/Audiosutras/pihole-unbound-dockercompose/wiki) for additional information
