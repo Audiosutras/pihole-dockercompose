@@ -1,5 +1,27 @@
 # PI-HOLE & Unbound Docker Compose
 
+## PreRequistes Installation
+
+### Docker & Docker Compose
+
+This project depends on having Docker and Docker Compose installed on the machine 
+you plan to run Pihole on. Ensure your machine has at least 4GB of RAM.
+
+To check if `docker` and `docker-compose` is already installed run the following commands from the command line:
+
+```
+$ docker --version
+Docker version 24.0.6, build ed223bc
+$ docker-compose --version
+docker-compose version 1.28.0, build d02a7b1a
+```
+
+If nothing was returned when running the above commands follow docker's recommend 
+installation method found here under [Scenario one: Install Docker Desktop](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop) for your operating system and/or linux distribution.
+
+## Running PiHole & Unbound
+
+
 ## Useful Resources
 
 - [Setup Pihole Docker (Official)](https://github.com/pi-hole/docker-pi-hole/#running-pi-hole-docker)
