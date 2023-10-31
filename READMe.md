@@ -12,11 +12,12 @@ Let's get started.
 
 ## DNS Resolver CheatSheet
 
-The table below documents the internal ip address of custom dns resolvers that the instance of Pihole comes pre-configured with. 
+The table below documents the port and internal IP address of custom dns resolvers that the instance of Pihole comes pre-configured with. 
 
 | DNS Resolver | Internal IP Address |
 | ------- | ------------------- |
 | Unbound | 10.1.1.3#53         |
+| Cloudflared | 10.1.1.4#5053   |
 
 ## Prerequiste Installation
 
