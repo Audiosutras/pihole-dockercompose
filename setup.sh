@@ -160,6 +160,31 @@ debian_additional_steps () {
     esac
 }
 
+run () {
+    echo ""
+    echo "Starting up Containers..."
+    docker-compose up -d
+}
+
+pihole_admin_info () {
+    read local_ip rest <<< $(hostname -I)
+    echo ""
+    echo "MACHINE PI-HOLE HAS BEEN INSTALLED ON COVERAGE"
+    echo "-----------------------------------------------"
+    echo "Set the DNS server for your Internet Connection to use the following IP address."
+    echo "Localhost IP Address: $local_ip"
+    echo "On your machine you can navigate to the below address to access the Pi-hole admin."
+    echo "http://127.0.0.1/admin"
+    echo ""
+    echo "LOCAL NETWORK PI-HOLE COVERAGE"
+    echo "------------------------------"
+    echo "Set the DNS server on your router to use the following IP address."
+    echo "Internal IP Address: $local_ip"
+    echo "On your local network you can navigate to the below address to access the Pi-hole admin."
+    echo "http://$local_ip/admin"
+    echo ""
+}
+
 operating_system () {
     PS3="SELECT operating system: "
 
@@ -172,6 +197,8 @@ operating_system () {
                 brew_install_docker
                 pihole_config
                 debian_additional_steps
+                run
+                pihole_admin_info
                 break
                 ;;
             *)
