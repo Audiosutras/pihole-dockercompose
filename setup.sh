@@ -93,8 +93,71 @@ pihole_config () {
     echo "PIHOLE_TZ=${timezone:=America/New_York}" >> .env
 }
 
+nano_network_manager () {
+    echo ""
+    echo "The nano text editor will open for /etc/NetworkManager/NetworkManager.conf."
+    echo "Under [main] you will need to add 'dns=default'"
+    echo "Inside of the file for example: "
+    echo ""
+    echo "   | [main]"
+    echo "   | ..."
+    echo "   | ..."
+    echo "   | dns=default"
+    echo "   | ..."
+    echo ""
+    echo "Press 'CTRL + X' then 'Y' and then 'ENTER' to exit the editor"
+    echo ""
+    echo ""
+    echo "Are you ready to proceed?"
+    read -p "Answer [y/n]:" nano_answer
+
+    case "$nano_answer" in
+        "y")
+            sudo nano /etc/NetworkManager/NetworkManager.conf
+            ;;
+        "n")
+            echo ""
+            echo "Re-enabling systemd-resolved"
+            sudo systemctl reenable systemd-resolved
+            sudo systemctl start systemd-resolved
+            ;;
+        *)
+            echo ""
+            echo "Re-enabling systemd-resolved"
+            sudo systemctl reenable systemd-resolved
+            sudo systemctl start systemd-resolved
+            echo ""
+            echo "Invalid Response - Exiting Setup Script for Pihole & Unbound"
+            exit 1
+            ;;
+    esac
+}
+
 debian_additional_steps () {
-    
+    echo ""
+    echo "Have you already disabled systemd-resolved?"
+    read -p "Answer [y/n]: " disabled
+
+    case "$disabled" in
+        "y")
+            echo ""
+            echo "Moving on..."
+            ;;
+        "n")
+            echo ""
+            echo "Disabling..."
+            sudo systemctl disable systemd-resolved
+            sudo systemctl stop systemd-resolved
+            nano_network_manager
+            rm /etc/resolv.conf
+            sudo systemctl restart NetworkManager 
+            ;;
+        *)
+            echo ""
+            echo "Invalid Response - Exiting Setup Script for Pihole & Unbound"
+            exit 1
+            ;;
+    esac
 }
 
 operating_system () {
@@ -108,6 +171,7 @@ operating_system () {
             "Ubuntu/Debian")
                 brew_install_docker
                 pihole_config
+                debian_additional_steps
                 break
                 ;;
             *)
