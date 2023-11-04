@@ -26,7 +26,7 @@ zshrc_or_bashrc_brew_config () {
     esac
 }
 
-debian_install_homebrew () {
+curl_install_homebrew () {
     echo ""
     echo "The chosen installation method for Docker requires Homebrew."
     echo "Does Homebrew need to be installed?"
@@ -51,7 +51,7 @@ debian_install_homebrew () {
     esac
 }
 
-debian_install_docker () {
+brew_install_docker () {
     echo ""
     echo "Pi-hole & Unbound run in docker containers."
     echo "Does Docker need to be installed?"
@@ -59,7 +59,7 @@ debian_install_docker () {
 
     case "$docker_answer" in
         "y")
-            debian_install_homebrew
+            curl_install_homebrew
             echo ""
             echo "Installing Docker.."
             brew install --cask docker
@@ -76,6 +76,27 @@ debian_install_docker () {
     esac
 }
 
+pihole_config () {
+    echo ""
+    echo "Timezone for Pi-hole? (default: America/New_York)"
+    read -p "Timezone: " timezone
+    echo ""
+    echo "Set a password for Pi-hole's admin interface? (default: pihole)"
+    read -p "Password: " -s password
+
+    if [[ -e './.env' ]]; then
+        rm ./.env
+        touch ./.env
+    fi
+
+    echo "PIHOLE_PWD=${password:=pihole}" >> .env
+    echo "PIHOLE_TZ=${timezone:=America/New_York}" >> .env
+}
+
+debian_additional_steps () {
+    
+}
+
 operating_system () {
     PS3="SELECT operating system: "
 
@@ -85,7 +106,8 @@ operating_system () {
     do
         case $os in
             "Ubuntu/Debian")
-                debian_install_docker
+                brew_install_docker
+                pihole_config
                 break
                 ;;
             *)
