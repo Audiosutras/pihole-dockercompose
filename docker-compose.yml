@@ -20,7 +20,7 @@ services:
     environment:
       - TZ=${PIHOLE_TZ}
       - WEBPASSWORD=${PIHOLE_PWD}
-      - PIHOLE_DNS_=${PIHOLE_DNS}
+      - PIHOLE_DNS_=194.242.2.4
     volumes:
       - "./etc-pihole:/etc/pihole"
       - "./etc-dnsmasq.d:/etc/dnsmasq.d"
